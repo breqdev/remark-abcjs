@@ -12,6 +12,7 @@ const remarkMusic = () => {
         } = new JSDOM();
 
         const renderInto = document.createElement("div");
+        renderInto.className = "abcjsContainer";
         ABCJS.renderAbc(renderInto, node.value);
         const data = fromDom(renderInto);
 
