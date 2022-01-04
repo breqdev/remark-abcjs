@@ -1,1 +1,4 @@
-export default { transform: {} };
+export default {
+  transform: {},
+  testPathIgnorePatterns: ["/node_modules/", "/abcjs/"],
+};

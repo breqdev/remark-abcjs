@@ -3,9 +3,16 @@
   "version": "0.1.5",
   "description": "A Remark plugin for embedding sheet music using ABCjs.",
   "main": "index.js",
+  "files": [
+    "/dist",
+    "/node_modules/abcjs/src/**/*"
+  ],
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "build": "babel index.js -d . --out-file-extension .cjs",
+    "build:mjs": "babel index.js --out-file dist/index.mjs --config-file ./mjs.babel.config.json",
+    "build:cjs": "babel index.js --out-file dist/index.cjs --config-file ./cjs.babel.config.json",
+    "build:bundle": "cp -r node_modules/abcjs dist/abcjs",
+    "build": "npm run build:mjs && npm run build:cjs && npm run build:bundle",
     "postinstall": "patch-package"
   },
   "repository": {
@@ -24,15 +31,13 @@
   "homepage": "https://github.com/Breq16/remark-abcjs#readme",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "require": "./index.cjs"
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
   },
   "dependencies": {
-    "abcjs": "6.0.0-beta.35",
     "hast-util-from-dom": "^3.0.0",
     "jsdom": "^19.0.0",
     "patch-package": "^6.4.7",
-    "remark-parse": "^10.0.1",
     "unified": "^10.1.1",
     "unist-util-map": "^2.0.0"
   },
@@ -41,6 +46,8 @@
     "@babel/core": "^7.16.7",
     "@babel/plugin-transform-modules-commonjs": "^7.16.7",
     "babel-plugin-add-module-exports": "^1.0.4",
-    "jest": "^27.4.5"
+    "jest": "^27.4.5",
+    "abcjs": "6.0.0-beta.35",
+    "remark-parse": "^10.0.1"
   }
 }
