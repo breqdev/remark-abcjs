@@ -1,6 +1,6 @@
 {
   "name": "remark-abcjs",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Remark plugin for embedding sheet music using ABCjs.",
   "main": "index.js",
   "scripts": {
