@@ -1,5 +1,5 @@
-import { fromDom } from "hast-util-from-dom";
-import { map } from "unist-util-map";
+import fromDom from "hast-util-from-dom";
+import map from "unist-util-map";
 import { JSDOM } from "jsdom";
 import ABCJS from "abcjs";
 
