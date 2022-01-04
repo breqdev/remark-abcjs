@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "build": "babel index.js -d cjs",
     "postinstall": "patch-package"
   },
   "repository": {
@@ -22,6 +23,10 @@
   },
   "homepage": "https://github.com/Breq16/remark-abcjs#readme",
   "type": "module",
+  "exports": {
+    "import": "./index.js",
+    "require": "./cjs/index.js"
+  },
   "dependencies": {
     "abcjs": "6.0.0-beta.35",
     "hast-util-from-dom": "^4.0.1",
@@ -32,6 +37,9 @@
     "unist-util-map": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.16.7",
     "jest": "^27.4.5"
   }
 }
