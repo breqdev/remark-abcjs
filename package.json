@@ -1,0 +1,37 @@
+{
+  "name": "remark-abcjs",
+  "version": "0.1.0",
+  "description": "A Remark plugin for embedding sheet music using ABCjs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Breq16/remark-abcjs.git"
+  },
+  "keywords": [
+    "remark",
+    "abcjs"
+  ],
+  "author": "Brooke Chalmers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Breq16/remark-abcjs/issues"
+  },
+  "homepage": "https://github.com/Breq16/remark-abcjs#readme",
+  "type": "module",
+  "dependencies": {
+    "abcjs": "6.0.0-beta.35",
+    "hast-util-from-dom": "^4.0.1",
+    "jsdom": "^19.0.0",
+    "patch-package": "^6.4.7",
+    "remark-parse": "^10.0.1",
+    "unified": "^10.1.1",
+    "unist-util-map": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}

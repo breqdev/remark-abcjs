@@ -1,0 +1,14 @@
+diff --git a/node_modules/abcjs/src/write/svg.js b/node_modules/abcjs/src/write/svg.js
+index 174602b..fae9221 100644
+--- a/node_modules/abcjs/src/write/svg.js
++++ b/node_modules/abcjs/src/write/svg.js
+@@ -2,6 +2,9 @@
+ 
+ /*global module */
+ 
++const JSDOM = require("jsdom").JSDOM;
++const document = (new JSDOM()).window.document;
++
+ var svgNS = "http://www.w3.org/2000/svg";
+ 
+ function Svg(wrapper) {
