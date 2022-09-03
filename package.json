@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Breq16/remark-abcjs.git"
+    "url": "git+https://github.com/breqdev/remark-abcjs.git"
   },
   "keywords": [
     "remark",
@@ -26,9 +26,9 @@
   "author": "Brooke Chalmers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Breq16/remark-abcjs/issues"
+    "url": "https://github.com/breqdev/remark-abcjs/issues"
   },
-  "homepage": "https://github.com/Breq16/remark-abcjs#readme",
+  "homepage": "https://github.com/breqdev/remark-abcjs#readme",
   "type": "module",
   "exports": {
     "import": "./dist/index.js",
